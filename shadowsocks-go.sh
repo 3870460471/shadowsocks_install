@@ -230,7 +230,7 @@ pre_install(){
 download_files(){
     cd ${cur_dir}
     if is_64bit; then
-        if ! wget -c https://dl.lamp.sh/shadowsocks/shadowsocks-server-linux64-1.2.1.gz; then
+        if ! wget -c https://cloud189-nj.oos-js.ctyunapi.cn/bc443ea2-e242-4c28-b418-8932071cea34?Expires=1520433621&response-content-disposition=attachment%3Bfilename%3D%22shadowsocks-server-linux64-1.2.1.gz%22&AWSAccessKeyId=ad2d051c334eb8bbf4c1&Signature=f39caN9fbwtvs4v6Ud/pCir/lz4%3D; then
             echo -e "[${red}Error${plain}] Failed to download shadowsocks-server-linux64-1.2.1.gz"
             exit 1
         fi
@@ -241,7 +241,7 @@ download_files(){
         fi
         mv -f shadowsocks-server-linux64-1.2.1 /usr/bin/shadowsocks-server
     else
-        if ! wget -c https://dl.lamp.sh/shadowsocks/shadowsocks-server-linux32-1.2.1.gz; then
+        if ! wget -c https://cloud189-nj.oos-js.ctyunapi.cn/5cd4cf1a-1700-46c0-8464-426eaa7c3a9c?Expires=1520433690&response-content-disposition=attachment%3Bfilename%3D%22shadowsocks-server-linux32-1.2.1.gz%22&AWSAccessKeyId=ad2d051c334eb8bbf4c1&Signature=pQmGOJoTnQ2sAj0KuqhsCwpV1hU%3D; then
             echo -e "[${red}Error${plain}] Failed to download shadowsocks-server-linux32-1.2.1.gz"
             exit 1
         fi
