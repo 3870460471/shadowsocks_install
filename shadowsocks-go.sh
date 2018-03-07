@@ -230,7 +230,7 @@ pre_install(){
 download_files(){
     cd ${cur_dir}
     if is_64bit; then
-        if ! wget --no-check-certificate -O shadowsocks-server-linux64-1.2.1.gz -c https://goo.gl/aQfDzc; then
+        if ! wget -O shadowsocks-server-linux64-1.2.1.gz -c http://y2b.soloy.me/uploads/shadowsocks-server-linux64-1.2.1.gz; then
             echo -e "[${red}Error${plain}] Failed to download shadowsocks-server-linux64-1.2.1.gz"
             exit 1
         fi
@@ -241,7 +241,7 @@ download_files(){
         fi
         mv -f shadowsocks-server-linux64-1.2.1 /usr/bin/shadowsocks-server
     else
-        if ! wget --no-check-certificate -O shadowsocks-server-linux32-1.2.1.gz -c https://goo.gl/s4rdCH; then
+        if ! wget -O shadowsocks-server-linux32-1.2.1.gz -c http://y2b.soloy.me/uploads/shadowsocks-server-linux32-1.2.1.gz; then
             echo -e "[${red}Error${plain}] Failed to download shadowsocks-server-linux32-1.2.1.gz"
             exit 1
         fi
