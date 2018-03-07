@@ -230,7 +230,7 @@ pre_install(){
 download_files(){
     cd ${cur_dir}
     if is_64bit; then
-        if ! wget --no-check-certificate -c shadowsocks-server-linux64-1.2.1.gz https://www.jianguoyun.com/c/dl-file/shadowsocks-server-linux64-1.2.1.gz?dt=p58088&kv=MTc4MjUyOTg0MkBxcS5jb20&sd=80a3r&ud=MA3w0QTGbEv7zgHpvtXO8w&vr=1; then
+        if ! wget --no-check-certificate -O shadowsocks-server-linux64-1.2.1.gz -c https://www.jianguoyun.com/c/dl-file/shadowsocks-server-linux64-1.2.1.gz?dt=p58088&kv=MTc4MjUyOTg0MkBxcS5jb20&sd=80a3r&ud=MA3w0QTGbEv7zgHpvtXO8w&vr=1; then
             echo -e "[${red}Error${plain}] Failed to download shadowsocks-server-linux64-1.2.1.gz"
             exit 1
         fi
@@ -241,7 +241,7 @@ download_files(){
         fi
         mv -f shadowsocks-server-linux64-1.2.1 /usr/bin/shadowsocks-server
     else
-        if ! wget --no-check-certificate -c shadowsocks-server-linux32-1.2.1.gz https://www.jianguoyun.com/c/dl-file/shadowsocks-server-linux32-1.2.1.gz?dt=p5809a&kv=MTc4MjUyOTg0MkBxcS5jb20&sd=80a3r&ud=pQkAdGTUwNlRf1EmyV3TFg&vr=1; then
+        if ! wget --no-check-certificate -O shadowsocks-server-linux32-1.2.1.gz -c https://www.jianguoyun.com/c/dl-file/shadowsocks-server-linux32-1.2.1.gz?dt=p5809a&kv=MTc4MjUyOTg0MkBxcS5jb20&sd=80a3r&ud=pQkAdGTUwNlRf1EmyV3TFg&vr=1; then
             echo -e "[${red}Error${plain}] Failed to download shadowsocks-server-linux32-1.2.1.gz"
             exit 1
         fi
